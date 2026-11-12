@@ -1,4 +1,3 @@
-
 import { Routes } from '@angular/router';
 import { Student } from './component/student/student';
 import { StudentList } from './component/student-list/student-list';

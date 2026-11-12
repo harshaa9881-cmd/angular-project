@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { StudentService, StudentRec } from '../../service/student';
 
 @Component({
   imports: [],
@@ -10,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentList implements OnInit {
 
-  students: any[] = [];
+  students: StudentRec[] = [];
+
+  constructor(private studentRec: StudentService) {}
 
   ngOnInit() {
-    this.students = JSON.parse(localStorage.getItem('students') || '[]');
+    this.students = this.studentRec.getStudent();
   }
 }
