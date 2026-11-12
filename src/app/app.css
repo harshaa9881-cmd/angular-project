@@ -1,15 +1,28 @@
 
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
 nav {
     display: flex;
     gap: 20px;
+    margin-top: 15px;
 }
 
-a {
+nav a {
+    color: white;
     text-decoration: none;
-    color: blue;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
-.active {
-    color: red;
-    font-weight: bold;
+nav a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+main {
+    padding: 20px;
 }

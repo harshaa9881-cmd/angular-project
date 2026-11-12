@@ -1,7 +1,44 @@
+
 <div class="student-card">
-    <h2>Student Information</h2>
-    <p>Name: {{ studentName }}</p>
-    <p>Age: {{ studentAge }}</p>
-    <p>Course: {{ course }}</p>
-    <button (click)="displayDetails()">Display Details in Console</button>
+
+  <h2>Student Registration</h2>
+
+  <form (ngSubmit)="registerStudent()">
+
+    <label>Student Name</label>
+    <input
+      type="text"
+      name="studentName"
+      [(ngModel)]="studentName"
+      required
+    >
+
+    <label>Age</label>
+    <input
+      type="number"
+      name="studentAge"
+      [(ngModel)]="studentAge"
+      required
+    >
+
+    <label>Department</label>
+    <input
+      type="text"
+      name="department"
+      [(ngModel)]="department"
+      required
+    >
+
+    <label>Email</label>
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="email"
+      required
+    >
+
+    <button type="submit">Register Student</button>
+
+  </form>
+
 </div>

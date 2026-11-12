@@ -1,9 +1,30 @@
 
-<h2>Student List</h2>
+<h2>Registered Students</h2>
 
-<ul>
-    <li>John Doe</li>
-    <li>David</li>
-    <li>Priya</li>
-    <li>Rahul</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (student of students; track student.id) {
+      <tr>
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.department }}</td>
+        <td>{{ student.email }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+@if (students.length === 0) {
+  <p>No students registered yet.</p>
+}

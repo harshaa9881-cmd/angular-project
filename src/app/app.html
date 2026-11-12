@@ -1,16 +1,20 @@
 
-<h1>Student Management</h1>
+<header>
+  <h2>Student Management System</h2>
 
-<nav>
-  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    Student
-  </a>
+  <nav>
+    <a routerLink="/register"
+       routerLinkActive="active">
+       Register Student
+    </a>
 
-  <a routerLink="/student-list" routerLinkActive="active">
-    Student List
-  </a>
-</nav>
+    <a routerLink="/student-list"
+       routerLinkActive="active">
+       Student List
+    </a>
+  </nav>
+</header>
 
-<hr>
-
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>
